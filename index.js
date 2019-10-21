@@ -15,7 +15,7 @@ function Componente(){
   useEffect(() => {
     fetch('https://s3.amazonaws.com/dolartoday/data.json')
       .then(response => response.json())
-      .then(json => console.log(json) || setCotizacion(json.USD.efectivo));
+      .then(json => setCotizacion(json.USD.efectivo));
   }, [])
   
   useEffect(() =>{
